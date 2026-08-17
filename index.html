@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julio Ribeiro — Back-end Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0a0e14;
+    --panel: #10151f;
+    --panel-2: #141a26;
+    --line: #232b3a;
+    --text: #e7ecf3;
+    --text-dim: #8b96a8;
+    --text-faint: #565f70;
+    --accent: #5eead4;
+    --accent-dim: #2c5c54;
+    --amber: #f2a65a;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-display);
+    line-height:1.5;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--accent-dim); color:var(--text);}
+  a{color:inherit; text-decoration:none;}
+
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:1; opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- Top status bar ---------- */
+  .statusbar{
+    position:sticky; top:0; z-index:50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 32px;
+    background:rgba(10,14,20,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--text-dim);
+  }
+  .statusbar .left{display:flex; align-items:center; gap:10px;}
+  .dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 0 0 rgba(94,234,212,.6);
+    animation:pulse 2.4s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(94,234,212,.5);}
+    70%{box-shadow:0 0 0 8px rgba(94,234,212,0);}
+    100%{box-shadow:0 0 0 0 rgba(94,234,212,0);}
+  }
+  .statusbar .right{display:flex; gap:24px;}
+  .statusbar .right span b{color:var(--text);}
+  @media(max-width:700px){
+    .statusbar .right{display:none;}
+  }
+
+  section{padding:100px 32px; max-width:1000px; margin:0 auto; position:relative; z-index:2;}
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{content:"//"; color:var(--text-faint);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:88vh;
+    display:flex; flex-direction:column; justify-content:center;
+    padding-top:60px;
+  }
+  .hero .id-line{
+    font-family:var(--font-mono); font-size:13px; color:var(--text-faint);
+    margin-bottom:28px;
+  }
+  .hero .id-line .path{color:var(--accent);}
+  h1{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:clamp(2.4rem, 6vw, 4.6rem);
+    line-height:1.05;
+    letter-spacing:-.02em;
+    max-width:820px;
+  }
+  h1 .accent{color:var(--accent);}
+  .hero .role{
+    font-family:var(--font-mono);
+    font-size:16px;
+    color:var(--text-dim);
+    margin-top:22px;
+    max-width:640px;
+  }
+  .hero .role .pipe{color:var(--text-faint); margin:0 10px;}
+  .hero p.summary{
+    margin-top:32px;
+    max-width:640px;
+    color:var(--text-dim);
+    font-size:16px;
+    line-height:1.7;
+  }
+  .hero .cta-row{
+    margin-top:44px;
+    display:flex; gap:14px; flex-wrap:wrap;
+  }
+  .btn{
+    font-family:var(--font-mono);
+    font-size:13px;
+    padding:12px 20px;
+    border-radius:4px;
+    border:1px solid var(--line);
+    color:var(--text);
+    transition:border-color .2s, background .2s, transform .15s;
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn:hover{border-color:var(--accent); background:rgba(94,234,212,0.06); transform:translateY(-1px);}
+  .btn.primary{background:var(--accent); color:#06120f; border-color:var(--accent); font-weight:600;}
+  .btn.primary:hover{background:#7ff2df;}
+
+  .uptime{
+    margin-top:64px;
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--text-faint);
+  }
+  .uptime b{color:var(--accent); font-weight:600;}
+
+  /* ---------- section headers ---------- */
+  h2{
+    font-family:var(--font-display);
+    font-size:clamp(1.6rem,3vw,2.2rem);
+    font-weight:600;
+    letter-spacing:-.01em;
+    margin-bottom:48px;
+  }
+
+  /* ---------- Log / experience timeline ---------- */
+  .log{
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    background:var(--panel);
+  }
+  .log-entry{
+    display:grid;
+    grid-template-columns:150px 1px 1fr;
+    gap:0;
+    border-bottom:1px solid var(--line);
+  }
+  .log-entry:last-child{border-bottom:none;}
+  .log-time{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--text-faint);
+    padding:28px 20px;
+    line-height:1.6;
+  }
+  .log-rule{background:var(--line);}
+  .log-body{padding:28px 28px 28px 32px; position:relative;}
+  .log-body::before{
+    content:"";
+    position:absolute; left:-1px; top:34px;
+    width:9px; height:9px; border-radius:50%;
+    background:var(--bg);
+    border:2px solid var(--accent);
+  }
+  .log-tag{
+    display:inline-block;
+    font-family:var(--font-mono);
+    font-size:10px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:3px 8px;
+    border-radius:3px;
+    background:var(--accent-dim);
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  .log-tag.infra{background:#3a3320; color:var(--amber);}
+  .log-tag.ops{background:#232b3a; color:var(--text-dim);}
+  .log-role{font-family:var(--font-display); font-weight:600; font-size:18px; margin-bottom:4px;}
+  .log-org{font-family:var(--font-mono); font-size:13px; color:var(--text-dim); margin-bottom:14px;}
+  .log-desc{color:var(--text-dim); font-size:14.5px; line-height:1.7; max-width:640px;}
+  .log-desc ul{margin-top:10px; padding-left:18px;}
+  .log-desc li{margin-bottom:6px;}
+  .log-stack{
+    margin-top:16px; display:flex; flex-wrap:wrap; gap:8px;
+  }
+  .chip{
+    font-family:var(--font-mono);
+    font-size:11px;
+    padding:4px 9px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    color:var(--text-dim);
+  }
+  @media(max-width:640px){
+    .log-entry{grid-template-columns:1px 1fr;}
+    .log-time{display:none;}
+  }
+
+  /* ---------- Project spotlight ---------- */
+  .project-panel{
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+    padding:40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .project-panel::after{
+    content:"";
+    position:absolute; top:-40%; right:-20%;
+    width:420px; height:420px;
+    background:radial-gradient(circle, rgba(94,234,212,0.10) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .project-title{font-family:var(--font-display); font-weight:600; font-size:26px; margin-bottom:10px;}
+  .project-sub{font-family:var(--font-mono); font-size:13px; color:var(--accent); margin-bottom:24px;}
+  .project-desc{color:var(--text-dim); font-size:15px; line-height:1.75; max-width:680px; margin-bottom:28px;}
+  .metrics{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    margin-bottom:28px;
+  }
+  .metric{background:var(--panel); padding:18px 20px;}
+  .metric .num{font-family:var(--font-mono); font-size:22px; color:var(--accent); font-weight:600;}
+  .metric .label{font-family:var(--font-mono); font-size:11px; color:var(--text-faint); margin-top:6px; text-transform:uppercase; letter-spacing:.06em;}
+  @media(max-width:640px){.metrics{grid-template-columns:1fr;}}
+
+  .pipeline{
+    display:flex; align-items:center; flex-wrap:wrap; gap:0;
+    font-family:var(--font-mono); font-size:12px;
+  }
+  .pipeline .step{
+    padding:8px 14px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    color:var(--text-dim);
+    background:var(--bg);
+  }
+  .pipeline .arrow{color:var(--text-faint); padding:0 8px;}
+
+  /* ---------- Skills ---------- */
+  .skills-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line); border-radius:8px; overflow:hidden;
+  }
+  .skill-block{background:var(--panel); padding:26px 24px;}
+  .skill-block .k{
+    font-family:var(--font-mono); font-size:11px; color:var(--text-faint);
+    text-transform:uppercase; letter-spacing:.08em; margin-bottom:12px;
+  }
+  .skill-block .v{font-family:var(--font-display); font-size:15px; line-height:1.6; color:var(--text);}
+  @media(max-width:700px){.skills-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Education ---------- */
+  .edu-row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:20px 0; border-bottom:1px solid var(--line); gap:16px; flex-wrap:wrap;
+  }
+  .edu-row:last-child{border-bottom:none;}
+  .edu-name{font-family:var(--font-display); font-weight:600; font-size:16px;}
+  .edu-course{font-family:var(--font-mono); font-size:13px; color:var(--text-dim); margin-top:4px;}
+  .edu-date{font-family:var(--font-mono); font-size:12px; color:var(--text-faint); white-space:nowrap;}
+
+  /* ---------- Contact / footer ---------- */
+  footer{
+    padding:100px 32px 60px;
+    text-align:center;
+    border-top:1px solid var(--line);
+    margin-top:40px;
+  }
+  footer .eyebrow{justify-content:center;}
+  footer h2{margin-bottom:20px;}
+  footer p{color:var(--text-dim); max-width:480px; margin:0 auto 40px; font-size:15px;}
+  .contact-row{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+  .foot-meta{
+    margin-top:70px; font-family:var(--font-mono); font-size:11px; color:var(--text-faint);
+  }
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+    .reveal{opacity:1; transform:none;}
+  }
+
+  a:focus-visible, .btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<div class="statusbar">
+  <div class="left">
+    <span class="dot"></span>
+    <span>julio-ribeiro <span style="color:var(--text-faint)">·</span> status: <b style="color:var(--accent)">online</b></span>
+  </div>
+  <div class="right">
+    <span>role: <b>back-end / iot</b></span>
+    <span>base: <b>brasil</b></span>
+    <span id="clock">--:--:--</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="id-line reveal">$ whoami <span class="path">→ /julio-ribeiro/profile</span></div>
+  <h1>Desenvolvedor Back-end<br>Python • APIs • Banco de Dados <span class="accent">Arquitetura de Sistemas</span><br></h1>
+  <div class="role">
+    Desenvolvedor Back-end <span class="pipe">|</span> Python & Flask <span class="pipe">|</span> APIs & IoT
+  </div>
+  <p class="summary">
+    Estudante de Análise e Desenvolvimento de Sistemas na UniMetrocamp (formatura prevista para dezembro de 2026),
+    com base sólida em infraestrutura crítica antes de migrar para desenvolvimento. Fui líder técnico de um sistema
+    IoT de monitoramento respiratório, arquitetando back-end, integrando APIs e implementando alertas automáticos
+    em tempo real.
+  </p>
+  <div class="cta-row">
+    <a href="mailto:julioribeiroq@gmail.com" class="btn primary">enviar e-mail →</a>
+    <a href="https://github.com/Julioribeiroo" target="_blank" class="btn">github ↗</a>
+    <a href="https://www.linkedin.com/in/julio-ribeiroc" target="_blank" class="btn">linkedin ↗</a>
+  </div>
+  <div class="uptime">uptime em tecnologia: <b>desde 2012</b> · em back-end/iot: <b>desde 2025</b></div>
+</section>
+
+<section id="experience">
+  <div class="eyebrow reveal">deploy log</div>
+  <h2 class="reveal">Experiência</h2>
+  <div class="log reveal">
+    <div class="log-entry">
+      <div class="log-time">AGO 2025<br>— JAN 2026</div>
+      <div class="log-rule"></div>
+      <div class="log-body">
+        <span class="log-tag">iot & cloud</span>
+        <div class="log-role">Líder Técnico — Sistema de Monitoramento Respiratório</div>
+        <div class="log-org">Centro Universitário UniMetrocamp · Campinas, SP</div>
+        <div class="log-desc">
+          Solução IoT de saúde para monitoramento ambiental e prevenção de crises respiratórias em tempo real.
+          <ul>
+            <li>Arquitetura de back-end em Python e Flask</li>
+            <li>Integração de APIs de geolocalização e clima (OpenWeatherMap)</li>
+            <li>Notificações automáticas de alerta crítico via SendGrid</li>
+            <li>Segmentação de usuários por condição respiratória em banco SQLite</li>
+          </ul>
+        </div>
+        <div class="log-stack">
+          <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">REST APIs</span>
+          <span class="chip">SQLite</span><span class="chip">IoT</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-time">MAI 2024<br>— JUL 2025</div>
+      <div class="log-rule"></div>
+      <div class="log-body">
+        <span class="log-tag infra">infraestrutura</span>
+        <div class="log-role">DataCenter e CyberSec</div>
+        <div class="log-org">Agis · Campinas, SP</div>
+        <div class="log-desc">
+          Arquitetura de infraestrutura crítica, servidores corporativos e soluções de storage para canais de
+          distribuição e parceiros de negócio.
+          <ul>
+            <li>Validação de arquiteturas de servidor e storage (Lenovo, HPE)</li>
+            <li>Especificação de switches gerenciáveis e projetos de rede (Intelbras)</li>
+            <li>Avaliações de compatibilidade entre storage, memória, processadores e rede</li>
+            <li>Suporte técnico a equipes comerciais em viabilidade e precificação estratégica</li>
+          </ul>
+        </div>
+        <div class="log-stack">
+          <span class="chip">Servidores HPE/Lenovo</span><span class="chip">Storage</span>
+          <span class="chip">Networking</span><span class="chip">Pré-vendas técnicas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-time">JAN 2017<br>— ABR 2024</div>
+      <div class="log-rule"></div>
+      <div class="log-body">
+        <span class="log-tag ops">operações</span>
+        <div class="log-role">Assistente Administrativo</div>
+        <div class="log-org">Bordados MA · Campinas, SP</div>
+        <div class="log-desc">
+          Suporte a múltiplas frentes do negócio: produção, atendimento ao cliente e organização administrativa,
+          coordenando o fluxo de informação entre setores.
+        </div>
+        <div class="log-stack">
+          <span class="chip">Atendimento</span><span class="chip">Gestão de documentos</span>
+          <span class="chip">Organização de processos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="project">
+  <div class="eyebrow reveal">projeto em destaque</div>
+  <h2 class="reveal">O sistema que ele construiu</h2>
+  <div class="project-panel reveal">
+    <div class="project-title">Intelligent Respiratory Risk Monitoring System</div>
+    <div class="project-sub">IoT & Cloud · Python · Flask · REST APIs</div>
+    <p class="project-desc">
+      MVP funcional capaz de processar dados ambientais e disparar alertas em tempo real para prevenção de crises
+      respiratórias. Arquitetura pensada para escalar o monitoramento em múltiplas cidades simultaneamente.
+    </p>
+    <div class="metrics">
+      <div class="metric"><div class="num">MVP</div><div class="label">entregue e funcional</div></div>
+      <div class="metric"><div class="num">N</div><div class="label">cidades monitoradas em paralelo</div></div>
+      <div class="metric"><div class="num">Real-time</div><div class="label">alertas críticos</div></div>
+    </div>
+    <div class="pipeline">
+      <span class="step">dados ambientais</span><span class="arrow">→</span>
+      <span class="step">API OpenWeatherMap</span><span class="arrow">→</span>
+      <span class="step">Flask back-end</span><span class="arrow">→</span>
+      <span class="step">SQLite</span><span class="arrow">→</span>
+      <span class="step">alerta via SendGrid</span>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="eyebrow reveal">stack</div>
+  <h2 class="reveal">Habilidades</h2>
+  <div class="skills-grid reveal">
+    <div class="skill-block">
+      <div class="k">Back-end</div>
+      <div class="v">Desenvolvimento de back-end, Python, Flask, arquitetura de sistemas</div>
+    </div>
+    <div class="skill-block">
+      <div class="k">Integração</div>
+      <div class="v">APIs REST, integração de serviços externos (clima, geolocalização, notificações)</div>
+    </div>
+    <div class="skill-block">
+      <div class="k">Dados</div>
+      <div class="v">Banco de dados, modelagem SQLite, segmentação de dados</div>
+    </div>
+    <div class="skill-block">
+      <div class="k">Infraestrutura</div>
+      <div class="v">Servidores HPE/Lenovo, storage, redes Intelbras, arquitetura crítica</div>
+    </div>
+    <div class="skill-block">
+      <div class="k">Idiomas</div>
+      <div class="v">Inglês (Professional Working)</div>
+    </div>
+    <div class="skill-block">
+      <div class="k">Certificações</div>
+      <div class="v">SEPESQI · Recognition of Competence in English · Intelbras — Redes de Computadores</div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="eyebrow reveal">formação</div>
+  <h2 class="reveal">Educação</h2>
+  <div class="reveal">
+    <div class="edu-row">
+      <div>
+        <div class="edu-name">Centro Universitário UniMetrocamp</div>
+        <div class="edu-course">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+      </div>
+      <div class="edu-date">MAR 2023 — DEZ 2026</div>
+    </div>
+    <div class="edu-row">
+      <div>
+        <div class="edu-name">Faculdade Prepara</div>
+        <div class="edu-course">Técnico em Tecnologia e Ferramentas Digitais</div>
+      </div>
+      <div class="edu-date">MAI 2015 — JUL 2017</div>
+    </div>
+    <div class="edu-row">
+      <div>
+        <div class="edu-name">Faculdade Microlins</div>
+        <div class="edu-course">Certificado Profissional em Tecnologia da Informação</div>
+      </div>
+      <div class="edu-date">ABR 2012 — JUN 2014</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="eyebrow reveal">contato</div>
+  <h2 class="reveal">Bora conversar?</h2>
+  <p class="reveal">Aberto a oportunidades em desenvolvimento back-end e projetos que envolvam IoT, APIs e dados em tempo real.</p>
+  <div class="contact-row reveal">
+    <a href="mailto:julioribeiroq@gmail.com" class="btn primary">julioribeiroq@gmail.com</a>
+    <a href="https://github.com/Julioribeiroo" target="_blank" class="btn">github.com/Julioribeiroo</a>
+    <a href="https://www.linkedin.com/in/julio-ribeiroc" target="_blank" class="btn">linkedin/julio-ribeiroc</a>
+  </div>
+  <div class="foot-meta">// julio-ribeiro / build 2026 / status: online</div>
+</footer>
+
+<script>
+  // live clock in status bar
+  function tick(){
+    const el = document.getElementById('clock');
+    if(!el) return;
+    const d = new Date();
+    el.textContent = d.toLocaleTimeString('pt-BR', {hour12:false});
+  }
+  tick(); setInterval(tick, 1000);
+
+  // scroll reveal
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  items.forEach(i=>io.observe(i));
+</script>
+
+</body>
+</html>
