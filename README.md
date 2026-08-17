@@ -1,174 +1,56 @@
-# 👨🏻‍💻 Julio Ribeiro
+<h1 data-importer="text" align="left">Julio Ribeiro</h1>
 
-**`Desenvolvedor Back-end`**
+###
 
-Me chamo Julio Ribeiro, sou desenvolvedor back-end focado em **Python**, **APIs**, **bancos de dados** e soluções **IoT**.  
-Atualmente curso **Análise e Desenvolvimento de Sistemas** na UniMetrocamp (formatura prevista para dezembro de 2026).  
+<h2 data-importer="text" align="left">Sobre mim</h2>
 
-Antes de migrar para o desenvolvimento, atuei em infraestrutura crítica. Fui **líder técnico** de um sistema IoT de monitoramento respiratório, onde arquitetei o back-end, integrei APIs e implementei alertas automáticos em tempo real.
+###
 
-<p align="left">
-  <a href="https://github.com/Julioribeiroo?tab=repositories&sort=stargazers">
-    <img
-      alt="Total de estrelas"
-      title="Total de estrelas GitHub"
-      src="https://custom-icon-badges.demolab.com/github/stars/Julioribeiroo?color=55960c&style=for-the-badge&labelColor=488207&logo=star&label=estrelas"
-    />
-  </a>
-  <a href="https://github.com/Julioribeiroo?tab=followers">
-    <img
-      alt="Seguidores"
-      title="Me siga no GitHub"
-      src="https://custom-icon-badges.demolab.com/github/followers/Julioribeiroo?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Seguidores&logoColor=white"
-    />
-  </a>
-  <a href="https://www.linkedin.com/in/julio-ribeiroc">
-    <img
-      alt="LinkedIn"
-      title="LinkedIn"
-      src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-    />
-  </a>
-  <a href="mailto:julioribeiroq@gmail.com">
-    <img
-      alt="Email"
-      title="Enviar e-mail"
-      src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"
-    />
-  </a>
-</p>
+<p data-importer="text" align="left"></p>
 
----
+###
 
-### 🤖 Linguagens e Tecnologias
+<p data-importer="text" align="left">Me chamo Julio Ribeiro, sou desenvolvedor back-end focado em Python, APIs, bancos de dados e soluções IoT.<br>Atualmente curso Análise e Desenvolvimento de Sistemas na UniMetrocamp (formatura prevista para dezembro de 2026).<br><br>Antes de migrar para o desenvolvimento, atuei em infraestrutura crítica. Fui líder técnico de um sistema IoT de monitoramento respiratório, onde arquitetei o back-end, integrei APIs e implementei alertas automáticos em tempo real.</p>
 
-<img
-  align="left"
-  alt="Python"
-  title="Python"
-  width="30px"
-  style="padding-right: 10px;"
-  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-/>
-<img
-  align="left"
-  alt="Flask"
-  title="Flask"
-  width="30px"
-  style="padding-right: 10px;"
-  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
-/>
-<img
-  align="left"
-  alt="SQLite"
-  title="SQLite"
-  width="30px"
-  style="padding-right: 10px;"
-  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
-/>
-<img
-  align="left"
-  alt="REST API"
-  title="REST APIs"
-  width="30px"
-  style="padding-right: 10px;"
-  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
-/>
-<img
-  align="left"
-  alt="Git"
-  title="Git"
-  width="30px"
-  style="padding-right: 10px;"
-  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-/>
-<img
-  align="left"
-  alt="Linux"
-  title="Linux"
-  width="30px"
-  style="padding-right: 10px;"
-  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
-/>
-<img
-  align="left"
-  alt="Docker"
-  title="Docker"
-  width="30px"
-  style="padding-right: 10px;"
-  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
-/>
-<img
-  align="left"
-  alt="HTML"
-  title="HTML"
-  width="30px"
-  style="padding-right: 10px;"
-  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-/>
-<img
-  align="left"
-  alt="CSS"
-  title="CSS"
-  width="30px"
-  style="padding-right: 10px;"
-  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-/>
-<img
-  align="left"
-  alt="JavaScript"
-  title="JavaScript"
-  width="30px"
-  style="padding-right: 10px;"
-  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-/>
+###
 
-<br/><br/>
+<h2 data-importer="text" align="left">🤖 Linguagens e Tecnologias</h2>
 
-### 📊 Estatísticas
+###
 
-<p>
-  <img
-    align="left"
-    alt="GitHub Stats"
-    height="200"
-    style="padding-right: 10px;"
-    src="https://github-readme-stats.vercel.app/api?username=Julioribeiroo&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br"
-  />
-  <img
-    align="left"
-    alt="Top Linguagens"
-    height="200"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Julioribeiroo&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=8"
-  />
-</p>
+<div data-importer="techs" align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" height="40" alt="flask logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" height="40" alt="sqlite logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" height="40" alt="fastapi logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="git logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" alt="docker logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" alt="linux logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+</div>
 
-<br/><br/>
+###
 
-### 🚀 Projeto em destaque
+<p data-importer="text" align="left">🚀 Projeto em destaque<br>Intelligent Respiratory Risk Monitoring System<br>Sistema IoT de monitoramento ambiental com alertas em tempo real para prevenção de crises respiratórias.<br><br>Dados ambientais → OpenWeatherMap API → Flask back-end → SQLite → alerta SendGrid<br>Arquitetura back-end em Python + Flask<br>Integração de APIs de clima e geolocalização<br>Notificações automáticas de alerta crítico<br>Segmentação de usuários por condição respiratória.<br><br>📫 Contato<br>Aberto a oportunidades em desenvolvimento back-end, IoT, APIs e sistemas com dados em tempo real.<br><br>📧 julioribeiroq@gmail.com<br>💻 github.com/Julioribeiroo<br>🔗 linkedin.com/in/julio-ribeiroc</p>
 
-**Intelligent Respiratory Risk Monitoring System**  
-Sistema IoT de monitoramento ambiental com alertas em tempo real para prevenção de crises respiratórias.
+###
 
-```
-dados ambientais → OpenWeatherMap API → Flask back-end → SQLite → alerta SendGrid
-```
+<div data-importer="stats" align="center">
+  <img src="https://raw.githubusercontent.com/Julioribeiroo/Julioribeiroo/languages-output/languages.svg?locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="languages graph"  />
+  <img src="https://streak-stats.demolab.com?user=Julioribeiroo&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph"  />
+  <img src="https://raw.githubusercontent.com/Julioribeiroo/Julioribeiroo/trophy-output/trophy.svg?theme=dracula&column=-1&row=1&margin-w=8&margin-h=8&no-bg=false&no-frame=false&order=4" height="150" alt="trophy graph"  />
+  <img src="https://raw.githubusercontent.com/Julioribeiroo/Julioribeiroo/activity-graph-output/activity-graph.svg?radius=16&theme=react&area=true&order=5" height="300" alt="activity-graph graph"  />
+</div>
 
-- Arquitetura back-end em **Python + Flask**
-- Integração de APIs de clima e geolocalização
-- Notificações automáticas de alerta crítico
-- Segmentação de usuários por condição respiratória
-
----
-
-### 📫 Contato
-
-Aberto a oportunidades em **desenvolvimento back-end**, **IoT**, **APIs** e sistemas com dados em tempo real.
-
-- 📧 [julioribeiroq@gmail.com](mailto:julioribeiroq@gmail.com)
-- 💻 [github.com/Julioribeiroo](https://github.com/Julioribeiroo)
-- 🔗 [linkedin.com/in/julio-ribeiroc](https://www.linkedin.com/in/julio-ribeiroc)
-
-```
-// julio-ribeiro / status: online
-```
+###
