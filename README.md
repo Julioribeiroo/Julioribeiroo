@@ -10,7 +10,7 @@
 
 ###
 
-<p data-importer="text" align="left">Me chamo Julio Ribeiro, sou desenvolvedor back-end focado em Python, APIs, bancos de dados e soluções IoT.<br>Atualmente curso Análise e Desenvolvimento de Sistemas na UniMetrocamp (formatura prevista para dezembro de 2026).<br><br>Antes de migrar para o desenvolvimento, atuei em infraestrutura crítica. Fui líder técnico de um sistema IoT de monitoramento respiratório, onde arquitetei o back-end, integrei APIs e implementei alertas automáticos em tempo real.</p>
+<p data-importer="text" align="left">Me chamo Julio Ribeiro e sou desenvolvedor de software, com interesse em diferentes áreas da tecnologia e experiência com Python, JavaScript, APIs, bancos de dados e desenvolvimento de sistemas.</p>
 
 ###
 
