@@ -1,57 +1,45 @@
-<h1 data-importer="text" align="left">Julio Ribeiro</h1>
+<div align="center">
 
-###
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:6366f1&height=210&section=header&text=Julio%20Ribeiro&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Software%20Development%20%7C%20Infrastructure&descAlignY=62&descSize=18" alt="Julio Ribeiro — Software Development and Infrastructure" width="100%"/>
 
-<h2 data-importer="text" align="left">Sobre mim</h2>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-2563eb?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/julio-ribeiroc/) [![Email](https://img.shields.io/badge/Email-6366f1?style=for-the-badge&logo=gmail&logoColor=white)](mailto:julioribeiroq@gmail.com)
 
-###
-
-<p data-importer="text" align="left"></p>
-
-###
-
-<p data-importer="text" align="left">Me chamo Julio Ribeiro e sou desenvolvedor de software, com interesse em diferentes áreas da tecnologia e experiência com Python, JavaScript, APIs, bancos de dados e desenvolvimento de sistemas.</p>
-
-###
-
-<h2 data-importer="text" align="left">🤖 Linguagens e Tecnologias</h2>
-
-###
-
-<div data-importer="techs" align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" height="40" alt="flask logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" height="40" alt="sqlite logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" height="40" alt="fastapi logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="git logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" alt="docker logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" alt="linux logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
 </div>
 
-###
+## About me
 
-<p data-importer="text" align="left">🚀 Projeto em destaque<br>Intelligent Respiratory Risk Monitoring System<br>Sistema IoT de monitoramento ambiental com alertas em tempo real para prevenção de crises respiratórias.<br><br>Dados ambientais → OpenWeatherMap API → Flask back-end → SQLite → alerta SendGrid<br>Arquitetura back-end em Python + Flask<br>Integração de APIs de clima e geolocalização<br>Notificações automáticas de alerta crítico<br>Segmentação de usuários por condição respiratória.<br><br>📫 Contato<br>Aberto a oportunidades em desenvolvimento back-end, IoT, APIs e sistemas com dados em tempo real.<br><br>📧 julioribeiroq@gmail.com<br>💻 github.com/Julioribeiroo<br>🔗 linkedin.com/in/julio-ribeiroc</p>
+Systems Analysis and Development student in Brazil, with a background in IT infrastructure and solution architecture. I am developing my skills in Python, backend development, REST APIs and databases, building practical projects to strengthen my software engineering fundamentals.
 
-###
+## Technology & learning
 
-<br clear="both">
+**Projects:**
+
+![Python](https://img.shields.io/badge/Python-2563eb?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/JavaScript-2563eb?style=for-the-badge) ![HTML5](https://img.shields.io/badge/HTML5-2563eb?style=for-the-badge) ![CSS3](https://img.shields.io/badge/CSS3-2563eb?style=for-the-badge) ![Pygame](https://img.shields.io/badge/Pygame-2563eb?style=for-the-badge) ![Tkinter](https://img.shields.io/badge/Tkinter-2563eb?style=for-the-badge) ![Git](https://img.shields.io/badge/Git-2563eb?style=for-the-badge)
+
+**Current learning interests:**
+
+![Flask](https://img.shields.io/badge/Flask-6366f1?style=for-the-badge) ![FastAPI](https://img.shields.io/badge/FastAPI-6366f1?style=for-the-badge) ![SQLite](https://img.shields.io/badge/SQLite-6366f1?style=for-the-badge) ![Docker](https://img.shields.io/badge/Docker-6366f1?style=for-the-badge) ![Linux](https://img.shields.io/badge/Linux-6366f1?style=for-the-badge) ![REST APIs](https://img.shields.io/badge/REST%20APIs-6366f1?style=for-the-badge)
+
+## Featured projects
+
+| Project | Description | Stack |
+|---|---|---|
+| [FarmaVerde](https://github.com/Julioribeiroo/FarmaVerde) | Pharmacy storefront prototype with cart persistence and simulated checkout | JavaScript, HTML, CSS |
+| [Snake Game](https://github.com/Julioribeiroo/Snake-Game) | Classic game with collision detection and progressive difficulty | Python, Pygame |
+| [Cronometro](https://github.com/Julioribeiroo/Cronometro) | Desktop and terminal stopwatch with lap tracking | Python, Tkinter |
+| [Employee CRUD](https://github.com/Julioribeiroo/CRUD-em-JavaScript) | Employee management demo with browser storage | JavaScript |
+| [DomNeryFarma](https://github.com/Julioribeiroo/DomNeryFarma) | Earlier pharmacy storefront prototype | HTML, CSS, JavaScript |
+
+## Project concept
+
+**Intelligent Respiratory Risk Monitoring System** — a proposed environmental monitoring architecture using weather data, Flask, SQLite and email alerts. This concept is separate from the published repositories above.
+
+## GitHub activity
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=Julioribeiroo&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5" height="150" alt="GitHub Streak" />
-  <br/>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Julioribeiroo&theme=react&area=true&radius=16&hide_border=true" height="300" alt="GitHub Activity Graph" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Julioribeiroo&bg_color=0d1117&color=a5b4fc&line=6366f1&point=ffffff&area=true&hide_border=true" alt="GitHub contribution activity" width="100%"/>
 </div>
 
-###
+---
+
+Open to junior software development and technology opportunities.
