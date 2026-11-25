@@ -34,6 +34,18 @@ Systems Analysis and Development student in Brazil, with a background in IT infr
 
 **Intelligent Respiratory Risk Monitoring System** — a proposed environmental monitoring architecture using weather data, Flask, SQLite and email alerts. This concept is separate from the published repositories above.
 
+## Contribution snake 🐍
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Julioribeiroo/Julioribeiroo/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Julioribeiroo/Julioribeiroo/output/github-contribution-grid-snake.svg">
+    <img alt="Animated snake eating contributions in the GitHub contribution graph" src="https://raw.githubusercontent.com/Julioribeiroo/Julioribeiroo/output/github-contribution-grid-snake.svg" width="100%">
+  </picture>
+</div>
+
+> Updated automatically every day via GitHub Actions.
+
 ## GitHub activity
 
 <div align="center">
